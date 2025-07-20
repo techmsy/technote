@@ -20,10 +20,10 @@ sudo dnf install -y httpd
 
 ### 2. リバースプロキシに必要なモジュールの有効化
 
-Amazon Linux 2023 の Apache では、以下のモジュールが必要です：
-・mod_proxy
-・mod_proxy_http
-これらはデフォルトで含まれていますが、念のため確認します。
+Amazon Linux 2023 の Apache では、以下のモジュールが必要です：  
+・mod_proxy  
+・mod_proxy_http  
+これらはデフォルトで含まれていますが、念のため確認します。  
 
 ```bash
 # Proxy 関連モジュール（ほぼ自動でロードされるが明示的に書く場合）
@@ -63,8 +63,8 @@ sudo vi /etc/httpd/conf.d/reverse-proxy.conf
 ```
 
 🔸 バックエンドが自己署名証明書を使っている場合でも接続できる設定です。  
-🔸 バックエンドのアドレス（`localhost:3000`）は適宜変更してください。（例：http://192.168.x.x:3000/）
-🔸 HTTPS でリバースプロキシは mod_ssl が必要です。また、自己署名でない証明書は Let's Encrypt（certbot）などを使って取得してください。
+🔸 バックエンドのアドレス（`localhost:3000`）は適宜変更してください。（例：http://192.168.x.x:3000/）  
+🔸 HTTPS でリバースプロキシは mod_ssl が必要です。また、自己署名でない証明書は Let's Encrypt（certbot）などを使って取得してください。  
 
 ---
 
