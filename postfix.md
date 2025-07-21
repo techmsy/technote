@@ -12,6 +12,7 @@
 ```Bash
 hostnamectl set-hostname mail.mydomain.local
 ```
+
 #### ファイアウォール（firewalld）が有効な場合は、必要なポートを開放すること。
 
 ---
