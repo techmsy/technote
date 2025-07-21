@@ -73,8 +73,10 @@ docker start rocky8_test
 ---
 
 ### ✅ Docker Hub 以外で Rocky Linux 公式の Rocky 8 を Docker で利用する手順。
-        Rocky Linux は Docker Hub に加えて、Rocky Linux 公式の Git リポジトリ（GitLab）や Quay.io などにも Docker 関連の成果物を提供しています。
+Rocky Linux は Docker Hub に加えて、Rocky Linux 公式の Git リポジトリ（GitLab）や Quay.io などにも Docker 関連の成果物を提供しています。
+
 ---
+
 #### ✅ 目的
 Docker Hub を使わずに、Rocky Linux 公式の提供する Rocky 8 イメージを使って Docker コンテナを構築したい。
 
