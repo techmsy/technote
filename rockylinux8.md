@@ -1,4 +1,4 @@
-### ✅Rocky Linux 8 を Docker コンテナとして構築するための公式手順に基づく方法
+### ✅Rocky Linux 8を Dockerコンテナで構築方法
 
 ---
 
