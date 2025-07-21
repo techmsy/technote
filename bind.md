@@ -1,7 +1,7 @@
 ### DNS サーバーを BIND を使って構築する手順
 
 #### 前提：
-mydomain.local ドメイン
+- ドメイン mydomain.local
 
 #### 1. 前提条件と準備
 - Rocky Linux 8 サーバー: 最小限のインストールで構いません。
