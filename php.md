@@ -83,10 +83,11 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ```
 ---
 ✅ 変更点まとめ
-修正ポイント	内容
-header("Location: ...")	POST成功後、同じファイルにGETで再アクセスさせる
-exit(); の追加	リダイレクト後にHTML出力が走らないようにするため（必須！）
-$_SERVER['PHP_SELF']	現在のファイル自身のパス（たとえば /bbs_mysql.php）
+|修正ポイント|内容|
+|-------|-------|
+|header("Location: ...")|POST成功後、同じファイルにGETで再アクセスさせる|
+|exit(); の追加|リダイレクト後にHTML出力が走らないようにするため（必須！）|
+|$_SERVER['PHP_SELF']|現在のファイル自身のパス（たとえば /bbs_mysql.php）|
 
 📌 補足：リダイレクトしないと…
 リロード時にブラウザから警告が出る：
