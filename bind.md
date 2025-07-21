@@ -33,7 +33,7 @@ sudo vi /etc/named.conf
 
 options ブロックを以下のように編集します。
 
-```conf
+```named.conf
 options {
     listen-on port 53 { any; }; # 全てのIPアドレスからの接続を許可（LAN内のみなので問題なし）
     # listen-on port 53 { 127.0.0.1; 192.168.1.100; }; # 特定のIPアドレスのみ許可する場合はこちら
