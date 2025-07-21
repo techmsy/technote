@@ -82,6 +82,31 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 | su使用 | ❌非推奨（ログが残らない、事故リスク大） |
 | sudo使用 | ✅安全、ログ、限定許可が可能 |
 | rootログイン（SSH） | ❌禁止（/etc/ssh/sshd_config） |
-| ### sudo対象ユーザー管理 | ✅ visudoで適切に制限 |
+| sudo対象ユーザー管理 | ✅ visudoで適切に制限 |
 
 ---
+
+Tableのフォントサイズ変更のサンプル
+
+<style>
+.smalltable > table, .smalltable > th, .smalltable > td {
+   font-size: 50%;
+}
+</style>
+
+<div class="smalltable"> 
+
+表1
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+</div>
+
+表2
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
