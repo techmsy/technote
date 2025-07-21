@@ -146,7 +146,6 @@ client1         IN      A       192.168.1.102
 ```Bash
 sudo vi /var/named/mydomain.local.rev
 ```
----
 
 ```
 $TTL 86400
