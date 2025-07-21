@@ -112,8 +112,6 @@ BINDのゾーンファイルは /var/named/ ディレクトリに置くのが一
 sudo vi /var/named/mydomain.local.zone
 ``` 
 
----
-
 ``` 
 $TTL 86400
 @ IN SOA ns.mydomain.local. admin.mydomain.local. (
