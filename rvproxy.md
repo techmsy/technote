@@ -14,7 +14,7 @@
 
 ##### 1. Apache のインストール
 
-```bash
+```bash 
 sudo dnf install -y httpd
 ```
 
@@ -27,8 +27,7 @@ Amazon Linux 2023 の Apache では、以下のモジュールが必要です：
 ・mod_proxy_http  
 これらはデフォルトで含まれていますが、念のため確認します。  
 
-bash
-```
+```bash
 # Proxy 関連モジュール（ほぼ自動でロードされるが明示的に書く場合）
 echo 'LoadModule proxy_module modules/mod_proxy.so' | sudo tee -a /etc/httpd/conf.modules.d/00-proxy.conf
 echo 'LoadModule proxy_http_module modules/mod_proxy_http.so' | sudo tee -a /etc/httpd/conf.modules.d/00-proxy.conf
@@ -41,15 +40,13 @@ sudo dnf install -y mod_ssl
 
 ##### 3. 設定ファイルの新規作成
 
-bash
-```
+```bash
 sudo vi /etc/httpd/conf.d/reverse-proxy.conf
 ```
 
 以下を記述：
 
-apache
-```
+```apache
 <VirtualHost *:80>
     ServerName example.com  # 適宜変更（またはIP）
 
@@ -75,8 +72,7 @@ apache
 
 ##### 4. ファイアウォールの設定（必要に応じて）
 
-bash
-```
+```bash
 sudo firewall-cmd --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
@@ -85,8 +81,7 @@ sudo firewall-cmd --reload
 
 ##### 5. Apache の起動と自動起動設定
 
-bash
-```
+```bash
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
@@ -97,8 +92,7 @@ sudo systemctl start httpd
 
 ブラウザや curl で、Apache が動作しているサーバーの IP やドメインにアクセス。
 
-bash
-```
+```bash
 curl http://<サーバーのIPまたはドメイン>/
 ```
 
@@ -180,15 +174,13 @@ Amazon Linux 2023 における Apache（httpd）の設定ファイルの場所�
 
 Apache が現在どの設定を読み込んでいるか確認したい場合：
 
-bash
-```
+```bash
 apachectl -V | grep SERVER_CONFIG_FILE
 ```
 
 例：
 
-bash
-```
+```bash
 mathematica
 -D SERVER_CONFIG_FILE="/etc/httpd/conf/httpd.conf"
 ```
