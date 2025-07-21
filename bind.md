@@ -11,6 +11,8 @@
 - ファイアウォール設定: DNSポート（UDP/TCP 53）を開放する必要があります。
 - SELinux設定: BINDが正常に動作するようにSELinuxの設定も確認します。
 
+---
+
 #### 2. BINDのインストール
 ```Bash
 sudo dnf install -y bind bind-utils
@@ -93,8 +95,7 @@ include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
 ```
 
-#### ポイント:
-
+> ポイント:
 - listen-on: DNSサーバーが待ち受けるIPアドレスとポート。<br>
 LAN内のみなので any でも良いですが、セキュリティを考慮してサーバーのIPアドレスを指定することも可能です。
 - allow-query: DNSクエリを許可するクライアントのIPアドレスまたはネットワーク。ここでは 192.168.1.0/24 としています。
@@ -102,7 +103,7 @@ LAN内のみなので any でも良いですが、セキュリティを考慮し
 LAN内完結なら不要ですが、インターネットへのアクセスも考慮する場合は設定します。
 - mydomain.local の正引きゾーンと逆引きゾーンを追加します。
 
-##### 3.2. ゾーンファイルの作成
+#### 3.2. ゾーンファイルの作成
 BINDのゾーンファイルは /var/named/ ディレクトリに置くのが一般的です。SELinuxの制約もあるため、このディレクトリを使用してください。
 
 /var/named/mydomain.local.zone (正引きゾーンファイル)
@@ -167,7 +168,7 @@ $TTL 86400
 
 100 IN PTR ns.mydomain.local.: IPアドレスの最後のオクテット (100) が ns.mydomain.local であることを示す。
 
-##### 3.3. ゾーンファイルの所有者とパーミッションの変更
+#### 3.3. ゾーンファイルの所有者とパーミッションの変更
 ゾーンファイルが BIND ユーザー (named) によって読み取れるようにします。
 
 ```Bash
@@ -176,6 +177,8 @@ sudo chown named:named /var/named/mydomain.local.rev
 sudo chmod 640 /var/named/mydomain.local.zone
 sudo chmod 640 /var/named/mydomain.local.rev
 ```
+
+---
 
 #### 4. SELinuxの設定
 BINDがゾーンファイルを読み書きできるように、SELinuxのコンテキストを設定します。
@@ -191,6 +194,8 @@ sudo restorecon -Rv /var/named/
 sudo dnf install -y policycoreutils-python-utils
 ```
 
+---
+
 #### 5. ファイアウォールの設定
 DNSポート（UDP 53, TCP 53）を開放します。
 
@@ -198,6 +203,8 @@ DNSポート（UDP 53, TCP 53）を開放します。
 sudo firewall-cmd --permanent --add-service=dns
 sudo firewall-cmd --reload
 ```
+
+---
 
 #### 6. BINDの設定テストと起動
 設定ファイルの構文チェックを行います。
@@ -215,6 +222,8 @@ sudo systemctl start named
 sudo systemctl status named
 ```
 Active: active (running) となっていれば成功。
+
+---
 
 #### 7. クライアントからのテスト
 クライアントPC（Windows, Linuxなど）のDNS設定を、構築したDNSサーバーのIPアドレス（例: 192.168.1.100）に変更します。
@@ -245,6 +254,8 @@ nslookup 192.168.1.101
 dig -x 192.168.1.101
 ```
 上記で、設定したIPアドレスとホスト名が正しく解決されれば成功。
+
+---
 
 #### 注意事項
 - Serial番号の更新: ゾーンファイルを変更した際は、必ずSOAレコードのSerial番号を増やしてください。<br>
