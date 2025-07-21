@@ -3,20 +3,16 @@
 ---
 
 #### 1. 前提条件の確認
-Rocky Linux 8 がインストール済みであること。
-
-BIND DNSサーバーが同一LAN内に稼働しており、mydomain.local ドメインの名前解決が正しく行えること。
-
-mydomain.local のAレコードとしてPostfixサーバーのIPアドレスが登録されていること。
-
-逆引きレコード (PTR) も設定されていることが望ましい。
-
-Postfixサーバーのホスト名が mail.mydomain.local など、FQDNとして適切に設定されていること。
+- Rocky Linux 8 がインストール済みであること。
+- BIND DNSサーバーが同一LAN内に稼働しており、mydomain.local ドメインの名前解決が正しく行えること。
+- mydomain.local のAレコードとしてPostfixサーバーのIPアドレスが登録されていること。
+- 逆引きレコード (PTR) も設定されていることが望ましい。
+- Postfixサーバーのホスト名が mail.mydomain.local など、FQDNとして適切に設定されていること。
 
 ```Bash
 hostnamectl set-hostname mail.mydomain.local
 ```
-ファイアウォール（firewalld）が有効な場合は、必要なポートを開放すること。
+#### ファイアウォール（firewalld）が有効な場合は、必要なポートを開放すること。
 
 ---
 
