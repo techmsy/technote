@@ -1,4 +1,4 @@
-### ✅Rocky Linux 8を Dockerコンテナで構築
+### ✅Rocky Linux 8 を Dockerコンテナで構築
 
 ---
 
@@ -99,9 +99,6 @@ URL: https://quay.io/repository/rockylinux/rockylinux
 docker pull quay.io/rockylinux/rockylinux:8
 ```
 起動：
-
----
-
 ```bash
 docker run -it quay.io/rockylinux/rockylinux:8 /bin/bash
 ```
