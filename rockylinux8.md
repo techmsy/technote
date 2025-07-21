@@ -122,16 +122,16 @@ docker run -it myrocky8 /bin/bash
 ⚠️ 初回ビルドは多少時間がかかる場合があります。
 
 #### 🎯 補足：どちらが「公式」か？
-| リポジトリ |	信頼性 |	 役割 |
-| Docker Hub | ◎ |	一般的な pull 用リポジトリ（推奨） |
-| Quay.io | ◎ |	Docker Hub が使えない場合の代替 |
-| GitLab | ◎ |	ビルドレシピ（Dockerfile）を提供 |
+| リポジトリ |	信頼性 |	 役割 | 
+| Docker Hub | ◎ |	一般的な pull 用リポジトリ（推奨） | 
+| Quay.io | ◎ |	Docker Hub が使えない場合の代替 | 
+| GitLab | ◎ |	ビルドレシピ（Dockerfile）を提供 | 
 
 Rocky Linux チームが管理しているため、Quay.io および GitLab も完全に「公式」です。
 
 #### ✅ まとめ
-| 方法 |	コマンド例 |
-| Quay.io から pull |	docker pull quay.io/rockylinux/rockylinux:8 |
-| GitLab の Dockerfile をビルド |	git clone → docker build |
+| 方法 |	コマンド例 | 
+| Quay.io から pull |	docker pull quay.io/rockylinux/rockylinux:8 | 
+| GitLab の Dockerfile をビルド |	git clone → docker build | 
 
 ---
