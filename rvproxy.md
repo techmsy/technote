@@ -1,6 +1,5 @@
 ### Apache を使った HTTP → HTTPS リバースプロキシ構築手順（Amazon Linux 2023）
-
-
+----
 #### ✅ 構成概要
 
 - フロント（Apache）は **HTTP（ポート80）** で待ち受け
