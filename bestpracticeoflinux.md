@@ -1,4 +1,4 @@
-### ✅Linuxのインストール・初期設定・設定変更作業におけるベストプラクティス。セキュリティと運用の観点。
+### > Linuxのインストール・初期設定・設定変更作業におけるベストプラクティス。セキュリティと運用の観点。
 
 ---
 
@@ -54,7 +54,7 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 ---
 
 #### ✅ 5. 初期設定でやっておくこと一覧
-#####
+<span style="font-size:50%;">
 | 項目 | ベストプラクティス例 |
 |-------|-------|
 | ユーザー作成|	上述のとおり|
@@ -67,7 +67,7 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 | ログローテーション | logrotate 確認・カスタマイズ |
 | 不要サービスの停止 | systemctl disable <service> |
 | 自動アップデート | 検討：unattended-upgradesなど |
-#####
+</span>
 
 ---
 
