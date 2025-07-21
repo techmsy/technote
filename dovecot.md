@@ -24,9 +24,9 @@
 ```Bash
 sudo hostnamectl set-hostname mail.mydomain.local
 ```
-/etc/hosts にも以下の行を追加します。
+/etc/hosts にも以下の行を追加します。<br>
 192.168.X.Y   mail.mydomain.local mail
-（192.168.X.Y はこのメールサーバーのIPアドレスに置き換えてください）
+（192.168.X.Y はこのメールサーバーのIPアドレスに置き換えること）
 
 DNSレコードの確認:
 DNSサーバー側で以下のレコードが設定されていることを確認してください。
