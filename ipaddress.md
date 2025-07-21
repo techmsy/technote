@@ -1,4 +1,7 @@
 ### 🔧 固定IPアドレスとDNSを設定する手順（Amazon Linux 2023）
+- Amazon Linux 2023 は、systemd-networkd を使ってネットワークを管理しています。
+ （NetworkManager や netplan ではありません）
+- IPアドレスとDNSを固定で設定するには、以下のような手順になります。
 
 #### ① 設定ファイルの作成または編集
 `/etc/systemd/network/` 以下に `.network` ファイルを作成または編集します。
