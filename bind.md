@@ -228,7 +228,7 @@ Active: active (running) となっていれば成功。
 クライアントPC（Windows, Linuxなど）のDNS設定を、構築したDNSサーバーのIPアドレス（例: 192.168.1.100）に変更します。
 
 Linuxクライアントの場合
-/etc/resolv.conf を編集します。（再起動やDHCPクライアントによっては上書きされるため、永続化の方法は別途検討してください）
+/etc/resolv.conf を編集します。<br>（再起動やDHCPクライアントによっては上書きされるため、永続化の方法は別途検討してください）
 
 ```Bash
 sudo vi /etc/resolv.conf
