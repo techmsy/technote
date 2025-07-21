@@ -126,11 +126,13 @@ try {
 ✅ 推奨理由
 | 項目 | 内容 | なぜ推奨？ |
 |-------|-------|-------|
-| PDOを使用|	new PDO(...) | mysqli より汎用性が高く、後のバージョン移行にも対応しやすい |
-| エラーモード指定| PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION | SQLエラー時に try-catch で補足しやすく、バグに気づきやすい |
-| 文字コード設定| SET NAMES utf8 明示 | PHP 5.6では charset=utf8 だけでは不十分なことがあるため安全のために設定 |
-| FETCHモード指定| PDO::FETCH_ASSOC | 結果の配列が読みやすくなる（連想配列のみ） |
-| 例外補足| try-catch を使用 | 接続失敗時に丁寧なエラーメッセージを出せる|
+| PDOを使用 | new PDO(...) | mysqli より汎用性が高く、後のバージョン移行にも対応しやすい |
+| エラーモード指定 | PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION | SQLエラー時に try-catch で補足しやすく、バグに気づきやすい |
+| 文字コード設定 | SET NAMES utf8 明示 | PHP 5.6では charset=utf8 だけでは不十分なことがあるため安全のために設定 |
+| FETCHモード指定 | PDO::FETCH_ASSOC | 結果の配列が読みやすくなる（連想配列のみ） |
+| 例外補足 | try-catch を使用 | 接続失敗時に丁寧なエラーメッセージを出せる |
+
+---
 
 ⚠ 注意点（PHP 5.6 + MariaDB 10.11）
 - PHP 5.6 は既に EOL（サポート終了）：セキュリティ的に非常に危険
@@ -140,6 +142,8 @@ try {
 ✅ 文字コードの補足（重要）
 PHP 5.6 時代は charset=utf8 を DSN に書くだけでは、
 実際の接続時に utf8 が使われないケースがあるため、SET NAMES を使うのが安全策です。
+
+---
 
 ✅ まとめ：PHP 5.6での安全なDB接続には
 - PDO を使用（セキュアで可搬性あり）
