@@ -34,6 +34,7 @@ sudo whoami
 ---
 
 ##### ✅ 3. sudoのベストプラクティス
+
 | 作業内容 | 推奨方法 |
 |-------|-------|
 | 一時的にrootとして複数作業 | sudo -i または sudo -s |
@@ -54,6 +55,7 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 ---
 
 ##### ✅ 5. 初期設定でやっておくこと一覧
+
 | 項目 | ベストプラクティス例 |
 |-------|-------|
 | ユーザー作成|	上述のとおり|
@@ -76,6 +78,7 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 ---
 
 ##### ✅ 結論：ベストプラクティスまとめ
+
 | 項目 | 推奨設定 |
 |-------|-------|
 | rootで直接作業 | ❌避ける |
