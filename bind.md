@@ -4,13 +4,10 @@
 mydomain.local ドメイン
 
 #### 1. 前提条件と準備
-Rocky Linux 8 サーバー: 最小限のインストールで構いません。
-
-静的IPアドレス: DNSサーバーとなるRocky Linux 8には、固定IPアドレスを設定してください。例: 192.168.1.100
-
-ファイアウォール設定: DNSポート（UDP/TCP 53）を開放する必要があります。
-
-SELinux設定: BINDが正常に動作するようにSELinuxの設定も確認します。
+- Rocky Linux 8 サーバー: 最小限のインストールで構いません。
+- 静的IPアドレス: DNSサーバーとなるRocky Linux 8には、固定IPアドレスを設定してください。例: 192.168.1.100
+- ファイアウォール設定: DNSポート（UDP/TCP 53）を開放する必要があります。
+- SELinux設定: BINDが正常に動作するようにSELinuxの設定も確認します。
 
 #### 2. BINDのインストール
 ```Bash
@@ -75,16 +72,15 @@ zone "." IN {
     type hint;
     file "named.ca";
 };
-```
 
-##### mydomain.local の正引きゾーン
+# mydomain.local の正引きゾーン
 zone "mydomain.local" IN {
     type master;
     file "mydomain.local.zone"; # 後で作成するゾーンファイル名
     allow-update { none; };
 };
 
-##### mydomain.local の逆引きゾーン (例: 192.168.1.x の場合)
+# mydomain.local の逆引きゾーン (例: 192.168.1.x の場合)
 zone "1.168.192.in-addr.arpa" IN {
     type master;
     file "mydomain.local.rev"; # 後で作成する逆引きゾーンファイル名
@@ -93,17 +89,16 @@ zone "1.168.192.in-addr.arpa" IN {
 
 include "/etc/named.rfc1912.zones";
 include "/etc/named.root.key";
-ポイント:
+```
 
-listen-on: DNSサーバーが待ち受けるIPアドレスとポート。LAN内のみなので any でも良いですが、セキュリティを考慮してサーバーのIPアドレスを指定することも可能です。
+#### ポイント:
 
-allow-query: DNSクエリを許可するクライアントのIPアドレスまたはネットワーク。ここでは 192.168.1.0/24 としています。
+- listen-on: DNSサーバーが待ち受けるIPアドレスとポート。LAN内のみなので any でも良いですが、セキュリティを考慮してサーバーのIPアドレスを指定することも可能です。
+- allow-query: DNSクエリを許可するクライアントのIPアドレスまたはネットワーク。ここでは 192.168.1.0/24 としています。
+- forwarders: 内部DNSで解決できない場合に、上位のDNSサーバー（例: プロバイダのDNSやGoogle Public DNS）に問い合わせを転送するかどうか。LAN内完結なら不要ですが、インターネットへのアクセスも考慮する場合は設定します。
+- mydomain.local の正引きゾーンと逆引きゾーンを追加します。
 
-forwarders: 内部DNSで解決できない場合に、上位のDNSサーバー（例: プロバイダのDNSやGoogle Public DNS）に問い合わせを転送するかどうか。LAN内完結なら不要ですが、インターネットへのアクセスも考慮する場合は設定します。
-
-mydomain.local の正引きゾーンと逆引きゾーンを追加します。
-
-3.2. ゾーンファイルの作成
+##### 3.2. ゾーンファイルの作成
 BINDのゾーンファイルは /var/named/ ディレクトリに置くのが一般的です。SELinuxの制約もあるため、このディレクトリを使用してください。
 
 /var/named/mydomain.local.zone (正引きゾーンファイル)
@@ -130,25 +125,16 @@ client1         IN      A       192.168.1.102
 
 > 説明:
 
-$TTL: デフォルトのTTL (Time To Live)。
-
-@ IN SOA ns.mydomain.local. admin.mydomain.local. (...): Start of Authority レコード。
-
-ns.mydomain.local.: プライマリDNSサーバーのホスト名。
-
-admin.mydomain.local.: 管理者のメールアドレス (ただし @ を . に置き換え)。
-
-Serial: シリアル番号。ゾーンファイルを変更するたびにこの数値を増やす必要があります。一般的には日付＋連番 (例: YYYYMMDDNN) が使われます。
-
-Refresh, Retry, Expire, Minimum TTL: セカンダリDNSサーバーがゾーン情報を更新する間隔など。
-
-@ IN NS ns.mydomain.local.: mydomain.local のネームサーバーが ns.mydomain.local であることを示す。
-
-ns IN A 192.168.1.100: ホスト名 ns のIPアドレス。
-
-server1 IN A 192.168.1.101: ホスト名 server1 のIPアドレス。
-
-client1 IN A 192.168.1.102: ホスト名 client1 のIPアドレス。
+- $TTL: デフォルトのTTL (Time To Live)。
+- @ IN SOA ns.mydomain.local. admin.mydomain.local. (...): Start of Authority レコード。
+- ns.mydomain.local.: プライマリDNSサーバーのホスト名。
+- admin.mydomain.local.: 管理者のメールアドレス (ただし @ を . に置き換え)。
+- Serial: シリアル番号。ゾーンファイルを変更するたびにこの数値を増やす必要があります。一般的には日付＋連番 (例: YYYYMMDDNN) が使われます。
+- Refresh, Retry, Expire, Minimum TTL: セカンダリDNSサーバーがゾーン情報を更新する間隔など。
+- @ IN NS ns.mydomain.local.: mydomain.local のネームサーバーが ns.mydomain.local であることを示す。
+- ns IN A 192.168.1.100: ホスト名 ns のIPアドレス。
+- server1 IN A 192.168.1.101: ホスト名 server1 のIPアドレス。
+- client1 IN A 192.168.1.102: ホスト名 client1 のIPアドレス。
 
 /var/named/mydomain.local.rev (逆引きゾーンファイル)
 
@@ -252,7 +238,7 @@ dig server1.mydomain.local
 nslookup 192.168.1.101
 dig -x 192.168.1.101
 ```
-上記で、設定したIPアドレスとホスト名が正しく解決されれば成功です。
+上記で、設定したIPアドレスとホスト名が正しく解決されれば成功。
 
 #### 注意事項
 - Serial番号の更新: ゾーンファイルを変更した際は、必ずSOAレコードのSerial番号を増やしてください。<br>
