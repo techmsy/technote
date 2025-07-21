@@ -54,18 +54,20 @@ tuser ALL=(ALL) NOPASSWD: /usr/sbin/systemctl restart nginx
 ---
 
 #### ✅ 5. 初期設定でやっておくこと一覧
-##### | 項目 | ベストプラクティス例 |
-##### |-------|-------|
-##### | ユーザー作成|	上述のとおり|
-##### | SSH設定 | rootログイン禁止 PermitRootLogin no |
-##### | ファイアウォール設定 | firewalldまたはufwで必要ポートのみ許可 |
-##### | パッケージアップデート | dnf update や apt update && upgrade |
-##### | タイムゾーン設定 | timedatectl set-timezone Asia/Tokyo |
-##### | NTP/chrony設定 | 時刻同期の有効化 |
-##### | SELinux/AppArmor | 適切に設定・必要に応じてPermissiveに |
-##### | ログローテーション | logrotate 確認・カスタマイズ |
-##### | 不要サービスの停止 | systemctl disable <service> |
-##### | 自動アップデート | 検討：unattended-upgradesなど |
+#####
+| 項目 | ベストプラクティス例 |
+|-------|-------|
+| ユーザー作成|	上述のとおり|
+| SSH設定 | rootログイン禁止 PermitRootLogin no |
+| ファイアウォール設定 | firewalldまたはufwで必要ポートのみ許可 |
+| パッケージアップデート | dnf update や apt update && upgrade |
+| タイムゾーン設定 | timedatectl set-timezone Asia/Tokyo |
+| NTP/chrony設定 | 時刻同期の有効化 |
+| SELinux/AppArmor | 適切に設定・必要に応じてPermissiveに |
+| ログローテーション | logrotate 確認・カスタマイズ |
+| 不要サービスの停止 | systemctl disable <service> |
+| 自動アップデート | 検討：unattended-upgradesなど |
+#####
 
 ---
 
