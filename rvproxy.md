@@ -14,8 +14,7 @@
 
 ##### 1. Apache のインストール
 
-bash
-```
+```bash
 sudo dnf install -y httpd
 ```
 
