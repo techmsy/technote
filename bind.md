@@ -28,7 +28,7 @@ sudo vi /etc/named.conf
 ```
 ---
 
-options ブロックを以下のように編集します。
+options ブロックを以下のように編集。
 
 ```named.conf
 options {
@@ -93,9 +93,11 @@ include "/etc/named.root.key";
 
 #### ポイント:
 
-- listen-on: DNSサーバーが待ち受けるIPアドレスとポート。LAN内のみなので any でも良いですが、セキュリティを考慮してサーバーのIPアドレスを指定することも可能です。
+- listen-on: DNSサーバーが待ち受けるIPアドレスとポート。<br>
+LAN内のみなので any でも良いですが、セキュリティを考慮してサーバーのIPアドレスを指定することも可能です。
 - allow-query: DNSクエリを許可するクライアントのIPアドレスまたはネットワーク。ここでは 192.168.1.0/24 としています。
-- forwarders: 内部DNSで解決できない場合に、上位のDNSサーバー（例: プロバイダのDNSやGoogle Public DNS）に問い合わせを転送するかどうか。LAN内完結なら不要ですが、インターネットへのアクセスも考慮する場合は設定します。
+- forwarders: 内部DNSで解決できない場合に、上位のDNSサーバー（例: プロバイダのDNSやGoogle Public DNS）に問い合わせを転送するかどうか。<br>
+LAN内完結なら不要ですが、インターネットへのアクセスも考慮する場合は設定します。
 - mydomain.local の正引きゾーンと逆引きゾーンを追加します。
 
 ##### 3.2. ゾーンファイルの作成
@@ -135,6 +137,8 @@ client1         IN      A       192.168.1.102
 - ns IN A 192.168.1.100: ホスト名 ns のIPアドレス。
 - server1 IN A 192.168.1.101: ホスト名 server1 のIPアドレス。
 - client1 IN A 192.168.1.102: ホスト名 client1 のIPアドレス。
+
+---
 
 /var/named/mydomain.local.rev (逆引きゾーンファイル)
 
