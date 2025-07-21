@@ -73,8 +73,7 @@ docker start rocky8_test
 ---
 
 ### ✅ Docker Hub 以外で Rocky Linux 公式の Rocky 8 を Docker で利用する手順。
-##### Rocky Linux は Docker Hub に加えて、Rocky Linux 公式の Git リポジトリ（GitLab）や
-##### Quay.io などにも Docker 関連の成果物を提供しています。
+##### Rocky Linux は Docker Hub に加えて、Rocky Linux 公式の Git リポジトリ（GitLab）や<br>Quay.io などにも Docker 関連の成果物を提供しています。
 
 ---
 
