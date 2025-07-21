@@ -13,14 +13,21 @@
  2. コンテナを起動
  3. 永続化したい場合は volume や Dockerfile を使う
 
+---
+
 ##### 🧾 1. 公式イメージの確認（Docker Hub）
 Rocky Linux の公式 Docker イメージ:
 👉 https://hub.docker.com/_/rockylinux
+
+---
 
 ##### 🚀 2. Rocky Linux 8 の Docker イメージを取得
 ```bash
 docker pull rockylinux:8
 ```
+
+---
+
 ##### 🧪 3. コンテナを起動（対話モード）
 ```bash
 docker run -it rockylinux:8 /bin/bash
