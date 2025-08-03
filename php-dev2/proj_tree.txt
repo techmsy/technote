@@ -1,8 +1,0 @@
-php-dev/
-„¥„Ÿ„Ÿ .devcontainer/
-„    „¥„Ÿ„Ÿ devcontainer.json
-„    „¥„Ÿ„Ÿ Dockerfile
-„    „¤„Ÿ„Ÿ docker-compose.yml
-„¥„Ÿ„Ÿ src/
-„    „¤„Ÿ„Ÿ index.php
-„¤„Ÿ„Ÿ .env
