@@ -1,4 +1,5 @@
-```devcontainer.json
+devcontainer.json
+```json
 {
   "name": "php-dev",
   "dockerComposeFile": "docker-compose.yml",
@@ -18,7 +19,8 @@
 }
 ```
 
-```docker-compose.yml
+docker-compose.yml
+```yml
 version: "3.8"
 
 services:
@@ -54,6 +56,7 @@ volumes:
   db-data:
 ```
 
+Dockerfile
 ```Dockerfile
 FROM php:7.4-apache
 
@@ -94,10 +97,12 @@ try {
 ?>
 ```
 
-```.env
+.env.sample
+```.env.sample
 DB_HOST=db
 DB_PORT=3306
 DB_DATABASE=appdb
 DB_USER=user
 DB_PASSWORD=*
 ```
+
