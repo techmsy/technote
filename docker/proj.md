@@ -1,4 +1,4 @@
-devcontainer.json
+### devcontainer.json
 ```json
 {
   "name": "php-dev",
@@ -19,7 +19,7 @@ devcontainer.json
 }
 ```
 
-docker-compose.yml
+### docker-compose.yml
 ```yml
 version: "3.8"
 
@@ -56,7 +56,7 @@ volumes:
   db-data:
 ```
 
-Dockerfile
+### Dockerfile
 ```Dockerfile
 FROM php:7.4-apache
 
@@ -78,7 +78,8 @@ RUN a2enmod rewrite
 WORKDIR /var/www/html
 ```
 
-```index.php
+### index.php
+```php
 <?php
 $host = getenv('DB_HOST');
 $db   = getenv('DB_DATABASE');
@@ -97,12 +98,11 @@ try {
 ?>
 ```
 
-.env.sample
-```.env.sample
+### .env.sample
+```.env
 DB_HOST=db
 DB_PORT=3306
 DB_DATABASE=appdb
 DB_USER=user
 DB_PASSWORD=*
 ```
-
