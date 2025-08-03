@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  php:
+    build: .
+    volumes:
+      - ../src:/var/www/html
+    ports:
+      - "8888:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: appdb
+      DB_USER: user
+      DB_PASSWORD: password
+
+  db:
+    image: mariadb:10.5
+    restart: always
+    environment:
+      MARIADB_DATABASE: appdb
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+      MARIADB_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

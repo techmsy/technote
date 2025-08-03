@@ -1,0 +1,17 @@
+{
+  "name": "php-dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "php",
+  "workspaceFolder": "/var/www/html",
+  "remoteEnv": {
+    "ENV_FILE": "/var/www/html/.env"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "felixfbecker.php-debug",
+    "xdebug.php-pack"
+  ],
+  "postCreateCommand": "docker-php-ext-install mysqli"
+}
