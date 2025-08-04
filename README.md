@@ -11,3 +11,6 @@
 - Docker
   - [proj_tree](https://techmsy.github.io/technote/docker/proj_tree)
   - [proj](https://techmsy.github.io/technote/docker/proj)
+  - [postfix_debug_notes](https://techmsy.github.io/technote/docker/postfix_debug_notes)
+  - [rocky8](https://techmsy.github.io/technote/docker/rocky8)
+  - [spoofing_scenario_and_spf](https://techmsy.github.io/technote/docker/spoofing_scenario_and_spf)
