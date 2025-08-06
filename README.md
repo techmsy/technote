@@ -8,10 +8,15 @@
   - [BIND](https://techmsy.github.io/technote/techinfo/bind)
   - [Postfix](https://techmsy.github.io/technote/techinfo/postfix)
   - [Dovecot](https://techmsy.github.io/technote/techinfo/dovecot)
+
 - Docker
   - [proj_tree](https://techmsy.github.io/technote/docker/proj_tree)
   - [proj](https://techmsy.github.io/technote/docker/proj)
-  - [postfix_debug_notes](https://techmsy.github.io/technote/docker/postfix_debug_notes)
-  - [rocky8](https://techmsy.github.io/technote/docker/rocky8)
-  - [spoofing_scenario_and_spf](https://techmsy.github.io/technote/docker/spoofing_scenario_and_spf)
-  - [temp](https://techmsy.github.io/technote/docker/temp)
+
+- Others
+  - [postfix_debug_notes](https://techmsy.github.io/technote/others/postfix_debug_notes)
+  - [rocky8](https://techmsy.github.io/technote/others/rocky8)
+  - [spoofing_scenario_and_spf](https://techmsy.github.io/technote/others/spoofing_scenario_and_spf)
+  - [temp](https://techmsy.github.io/technote/others/temp)
+  - [spf_1](https://techmsy.github.io/technote/others/spf_1)
+  - [spf_2](https://techmsy.github.io/technote/others/spf_2)
