@@ -20,3 +20,4 @@
   - [temp](https://techmsy.github.io/technote/others/temp)
   - [spf_1](https://techmsy.github.io/technote/others/spf_1)
   - [spf_2](https://techmsy.github.io/technote/others/spf_2)
+  - [postfix_debug_notes](https://techmsy.github.io/technote/postfix_debug_notes)
