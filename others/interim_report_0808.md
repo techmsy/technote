@@ -7,7 +7,7 @@
 </details>
 <br>
 <details>
-<summary>2　LAMP環境を触ってみよう</summary>
+<summary>2　LAMPを触ってみよう</summary>
 <br>
 　　　理解を深めるためAWSで練習のLAMP環境を構築してみよう
 </details>
@@ -16,4 +16,5 @@
 <summary>3　LAMP+</summary>
 <br>
 　　　名前解決とメール送信の環境を構築してみよう
+
 </details>
