@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="qA1YN8Chq_BO06pwqvBs" name="ページ2">
+        <mxGraphModel dx="948" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="CHqjUxj6cKzn_HYcsoDi-2" value="" style="whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="3.44" width="130" height="116.56" as="geometry"/>
+                </mxCell>
+                <mxCell id="CHqjUxj6cKzn_HYcsoDi-1" value="" style="whiteSpace=wrap;html=1;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="kIS2fIYSDuADIkjb54kJ-2" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.communications.smtp_connector;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="10" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="kIS2fIYSDuADIkjb54kJ-3" value="" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.dns_server;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="3.44" width="93.55" height="113.12" as="geometry"/>
+                </mxCell>
+                <mxCell id="kIS2fIYSDuADIkjb54kJ-4" style="shape=image;editableCssRules=.*;image=data:image/svg+xml,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHN0eWxlPip7ZmlsbDojNTRCQ0FCfTwvc3R5bGU+PHBhdGggZD0iTSA4Ljc4NCA4LjM5IEMgOC41ODEgOC4zOTEgOC4zODIgOC40NTggOC4yMiA4LjU4MiBMIDAuMTE4IDE0Ljc3MiBDIC0wLjA0IDE0Ljg5NyAtMC4wNCAxNS4xMzggMC4xMTggMTUuMjYyIEwgMC40NTcgMTUuNTE1IEMgMC42MSAxNS42MzUgMC44MjUgMTUuNjM1IDAuOTggMTUuNTE1IEwgNC45OTggMTIuNDU0IEMgNS4yMiAxMi4yODYgNS41MjYgMTIuMjg2IDUuNzQ4IDEyLjQ1NCBMIDguNDA3IDE0LjQ4NyBDIDguNjI4IDE0LjY1NSA4LjkzNCAxNC42NTUgOS4xNTYgMTQuNDg3IEwgMTIuNjcxIDExLjgwNCBDIDEyLjkwMiAxMS42MzYgMTIuOTAyIDExLjI5MSAxMi42NzEgMTEuMTIyIEwgOS4zNDkgOC41ODIgQyA5LjE4NyA4LjQ1OCA4Ljk4OCA4LjM5IDguNzg0IDguMzkgWiBNIDE4LjA4MiA4LjM5IEMgMTcuODc4IDguMzkgMTcuNjggOC40NTggMTcuNTE5IDguNTgyIEwgOS40MTcgMTQuNzc4IEMgOS4yNTUgMTQuOTAxIDkuMjU1IDE1LjE0NCA5LjQxNyAxNS4yNjcgTCA5Ljc1MiAxNS41MjIgQyA5LjkwOCAxNS42MzggMTAuMTI0IDE1LjYzOCAxMC4yNzkgMTUuNTIyIEwgMTQuOTE0IDExLjk4OSBDIDE1LjEzNiAxMS44MjMgMTUuNDQyIDExLjgyMyAxNS42NjIgMTEuOTg5IEwgMjAuMTg5IDE1LjQ0MSBDIDIwLjQxIDE1LjYxIDIwLjcxOCAxNS42MSAyMC45MzkgMTUuNDQxIEwgMjMuODI4IDEzLjIyOCBDIDI0LjA1NyAxMy4wNTYgMjQuMDU3IDEyLjcxMiAyMy44MjggMTIuNTQgTCAxOC42NDcgOC41ODIgQyAxOC40ODUgOC40NTggMTguMjg2IDguMzkgMTguMDgyIDguMzkgWiIvPjwvc3ZnPg==;imageBackground=default;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="1.72" width="120" height="118.28" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
