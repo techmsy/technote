@@ -22,4 +22,4 @@
   - [spf_2](https://techmsy.github.io/technote/others/spf_2)
   - [interim_report_0808](https://techmsy.github.io/technote/others/interim_report_0808)
   - [mod_php](https://techmsy.github.io/technote/others/mod_php)
-  - [vhosts.conf](https://techmsy.github.io/technote/others/vhosts.conf)
+  - [vhostsconf](https://techmsy.github.io/technote/others/vhostsconf)
