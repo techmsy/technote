@@ -17,6 +17,7 @@ SSL証明書: ACM で管理
 - 3. Apache 側
 
 VirtualHost 例:
+```vhosts.conf
 Listen 0080
 
 <VirtualHost *:0080>
@@ -32,6 +33,7 @@ Listen 0080
     ErrorLog ${APACHE_LOG_DIR}/phpmyadmin_error.log
     CustomLog ${APACHE_LOG_DIR}/phpmyadmin_access.log combined
 </VirtualHost>
+```
 
 - 4. phpMyAdmin セキュリティ
 
@@ -61,3 +63,4 @@ ALB または Apache で IP 制限を併用
     │ phpMyAdmin                 │
     │ Port:0080                  │
     └──────────────┘
+
