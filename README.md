@@ -23,4 +23,4 @@
   - [interim_report_0808](https://techmsy.github.io/technote/others/interim_report_0808)
   - [mod_php](https://techmsy.github.io/technote/others/mod_php)
   - [vhostsconf](https://techmsy.github.io/technote/others/vhostsconf)
-  - [vhostsconf](https://techmsy.github.io/technote/others/nlbalbec2)
+  - [nlbalbec2](https://techmsy.github.io/technote/others/nlbalbec2)
