@@ -25,3 +25,5 @@
   - [vhostsconf](https://techmsy.github.io/technote/others/vhostsconf)
   - [nlb_alb_ec2](https://techmsy.github.io/technote/others/nlb_alb_ec2)
   - [ssh_conf](https://techmsy.github.io/technote/others/ssh_conf)
+  - [howtotest_nlb](https://techmsy.github.io/technote/others/howtotest_nlb)
+  - [turnutils_uclient](https://techmsy.github.io/technote/others/turnutils_uclient)
