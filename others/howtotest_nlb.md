@@ -26,8 +26,8 @@ b. nc (netcat)
 nc -vz <NLBのIPアドレス> 50443
 ```
 
--v → 詳細表示
--z → ポートスキャンモード（実際にデータは送らない）
+- -v → 詳細表示
+- -z → ポートスキャンモード（実際にデータは送らない）
 
 成功例: Connection to <IP> 50443 port [tcp/*] succeeded!
 
