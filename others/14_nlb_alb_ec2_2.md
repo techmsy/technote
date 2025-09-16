@@ -10,9 +10,9 @@
     </Directory>
 </VirtualHost>
 ```
-
-
-
+<br>
+<br>
+<br>
 - EC2 ポート 80 には既存Webサイトが稼働中
 - phpMyAdmin を別ポートで運用したい
 - 外部公開したい（インターネットアクセス）
