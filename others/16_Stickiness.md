@@ -9,8 +9,9 @@
 ```
 
 - セッションの sticky 設定を有効にする（AutoScaling特有の対策）
+ALBターゲットグループで stickiness を有効化する手順
 
-```ALBターゲットグループで stickiness を有効化する手順
+```aws
 1. AWSマネジメントコンソールにログイン
 → EC2 サービスを開く
 
