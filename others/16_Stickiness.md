@@ -1,6 +1,7 @@
 #2025/09/25
 
 - Apache に X-Forwarded-Proto を解釈させる
+
 ```/etc/httpd/conf.d/phpmyadmin.conf
 <IfModule mod_setenvif.c>
   SetEnvIf X-Forwarded-Proto https HTTPS=on
@@ -8,6 +9,7 @@
 ```
 
 - セッションの sticky 設定を有効にする（AutoScaling特有の対策）
+
 ```ALBターゲットグループで stickiness を有効化する手順
 1. AWSマネジメントコンソールにログイン
 → EC2 サービスを開く
