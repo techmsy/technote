@@ -29,3 +29,4 @@
   - [13_turnutils_uclient](https://techmsy.github.io/technote/others/13_turnutils_uclient)
   - [14_nlb_alb_ec2_2](https://techmsy.github.io/technote/others/14_nlb_alb_ec2_2)
   - [15_turnutils_uclient_2](https://techmsy.github.io/technote/others/15_turnutils_uclient_2)
+  - [16_Stickiness](https://techmsy.github.io/technote/others/16_Stickiness)
