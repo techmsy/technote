@@ -1,10 +1,10 @@
 ### ここから add0119
 ---
-1. 
+1_
  - 朝。新•フロー図にかきなおす。流れをつかむ
  - まずは記録台帳エクセルを作る。ゴールから作る。
 
-2. ※GeminiにGAS作成依頼の際にエクセルでモックの記録台帳を作って提出する
+2_ ※GeminiにGAS作成依頼の際にエクセルでモックの記録台帳を作って提出する
 
 user.各ログ (& host.各ログ}
 ⇅
@@ -22,13 +22,13 @@ ID列.アカウント台帳, 有効=有効 (& サーバー種類)
 月次(毎月1日)。課長へ承認依頼
 
 
-3. Geminiに学習させるためのGドライブの ”パス”集をメモにして残す
+3_ Geminiに学習させるためのGドライブの ”パス”集をメモにして残す
 ---
 ### ここまで最優先
 
 
 
-4. LogAggregator_EC2/ECS/CloudTrail 改造
+4_ LogAggregator_EC2/ECS/CloudTrail 改造
 
 - jsonをパースしない。gz解凍する
 - 接頭辞を付与する  yyyy-mm-dd_
@@ -36,12 +36,12 @@ ID列.アカウント台帳, 有効=有効 (& サーバー種類)
 yyyy-mm-dd_CloudTrail_v3_ap-northeast-3.log
 yyyy-mm-dd_{EC2各種ログ}.log
 
-5. S3toGdrive改造
+5_ S3toGdrive改造
 
 - Googleドライブ/log_data/ にまとめて放り込む
 - ECSログは収集やめる
 
-6. (検索 linux 異常ログ キーワード)
+6_ (検索 linux 異常ログ キーワード)
 ---
 ### ここまで add0119
 
