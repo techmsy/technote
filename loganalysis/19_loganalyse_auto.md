@@ -12,7 +12,7 @@
 ~/test-log/formatted
 
 3_ 
-chmod 644 /path/to/logs/your.log
+chmod 644 /path/to/logs/your.log<br>
 chmod 755 /path/to/logs
 
 4_ 
@@ -23,9 +23,27 @@ chmod 755 /path/to/logs
 - 出力先は入力ファイルのパスのサブフォルダ「formatted 」にして。そのサブフォルダがなければ作って。フォルダ名は設定ファイルで指定できるにして。
 
 5_ 
+2) グループ運用（640）にして、コンテナ側に “補助グループ” を付ける
+
+ログを root:loggroup 640 にして、コンテナプロセスにそのグループを付与します。
+
+docker-compose.yml の例（概念）：
+```yaml
+services:
+  wazuh.manager:
+    group_add:
+      - "<ホストのloggroupのGID>"
+    volumes:
+      - /path/to/logs:/logs:ro
+```
+ホスト側は：
+```bash
+chgrp <loggroup> /path/to/logs/*.log
+chmod 640 /path/to/logs/*.log
+chmod 750 /path/to/logs
+```
 
 ### ここまで add0129
-<br>
 <br>
 <br>
 ### ここから add0119
