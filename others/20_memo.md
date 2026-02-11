@@ -8,6 +8,7 @@
 `空のwinformsプロジェクト作成【slnx】(小さめ単体プロジェクト)` 
 - 前提
   - .NET SDK 10.0以上
+
 ```Bash
 mkdir MyTinyWinForms && cd MyTinyWinForms
 
@@ -18,3 +19,4 @@ dotnet sln MyTinyWinForms.slnx add MyTinyWinForms/MyTinyWinForms.csproj
 dotnet build MyTinyWinForms.slnx
 dotnet run --project MyTinyWinForms/MyTinyWinForms.csproj
 ```
+
