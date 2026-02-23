@@ -18,7 +18,7 @@ Google Workspace。そのGeminiを使用。GeminiはAPIは使用しない。
 以下に 役割分担・設計指針・注意点 を整理します。
 ---
 🧭 全体アーキテクチャ（推奨）
-Plain text```
+```Plain text
 Gemini（人が使う）
  └ UC → APIクエリ設計支援
 
