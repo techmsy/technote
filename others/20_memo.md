@@ -20,3 +20,41 @@ dotnet build MyTinyWinForms.slnx
 dotnet run --project MyTinyWinForms/MyTinyWinForms.csproj
 ```
 
+#### Section3
+Rocky
+MySQL
+Apache
+Basic-Auth
+php-fpm
+
+basicauth-apache-test
+├─ docker-compose.yml
+├─ .env
+│
+├─ apache
+│  ├─ Dockerfile
+│  ├─ phpmyadmin-proxy.conf
+│  └─ .htpasswd
+│
+└─ mysql
+   ├─ my.cnf
+   └─ init.sql
+
+`.env`
+```env
+MYSQL_ROOT_PASSWORD=rootpass
+MYSQL_DATABASE=sampledb
+MYSQL_USER=user
+MYSQL_PASSWORD=password
+```
+
+`.gitignore`
+```
+.env
+```
+
+起動
+docker compose up -d --build
+
+接続
+http://localhost:8080
