@@ -5,3 +5,4 @@
   - [22_memo (GWS組み合わせ)](https://techmsy.github.io/technote/others/22_memo)
   - [23_memo (判定ルール詳細と運用手順)](https://techmsy.github.io/technote/others/23_memo)
   - [24_memo (判定ルール100個カタログ)](https://techmsy.github.io/technote/others/24_memo)
+  - [25_memo (What I can do)](https://techmsy.github.io/technote/others/25_memo)
