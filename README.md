@@ -7,3 +7,4 @@
   - [24_memo (判定ルール100個カタログ)](https://techmsy.github.io/technote/others/x_24_memo)
   - [25_memo (What I can do)](https://techmsy.github.io/technote/others/x_25_memo)
   - [26_memo (What I can do 2)](https://techmsy.github.io/technote/others/26_memo)
+  - [27_memo (BasicAuthPassRotator)](https://techmsy.github.io/technote/others/27_memo)
