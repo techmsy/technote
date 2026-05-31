@@ -8,3 +8,4 @@
   - [25_memo (What I can do)](https://techmsy.github.io/technote/others/x_25_memo)
   - [26_memo (What I can do 2)](https://techmsy.github.io/technote/others/26_memo)
   - [27_memo (BasicAuthPassRotator)](https://techmsy.github.io/technote/others/27_memo)
+  - [28_memo (Prompt)](https://techmsy.github.io/technote/others/28_memo)
